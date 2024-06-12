@@ -25,7 +25,7 @@ const validateRegister = [
 
 // Devini Untuk Login
 const validateLogin = [
-    body('email').notEmpty().withMessage('Email Sudah Terdaftar'),
+    body('email').notEmpty().withMessage('Input Email Terlebih Dahulu'),
     body('password').isLength({ min: 6 }).withMessage('Password Minimal 6 characters Atau Lebih'),
 ]
 
