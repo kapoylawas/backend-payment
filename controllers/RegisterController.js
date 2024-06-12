@@ -37,11 +37,11 @@ const register = async(req, res) => {
         });
 
         //return response json
-        register.status(201).send({
+        res.status(201).send({
             success: true,
             message: "register success",
-            data: user
-        })
+            data: user,
+        });
     } catch (err) {
         res.status(500).send({
             success: false,

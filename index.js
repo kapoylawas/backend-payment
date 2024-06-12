@@ -10,6 +10,9 @@ const bodyParser = require('body-parser')
 //init app
 const app = express()
 
+//import router
+const router = require('./routes')
+
 //use cors
 app.use(cors())
 
@@ -24,8 +27,10 @@ const port = 3000;
 
 //route
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('API PAYMENT')
 })
+
+app.use('/api', router)
 
 //start server
 app.listen(port, () => {
